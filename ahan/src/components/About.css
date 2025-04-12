@@ -1,0 +1,29 @@
+.about {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.bullet {
+  color: var(--secondary-color);
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.about h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+} 

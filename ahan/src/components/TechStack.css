@@ -1,0 +1,54 @@
+.tech-stack {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.tech-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tech-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: translateY(-5px);
+  color: #ffeb3b;
+}
+
+/* Add specific colors for each technology */
+.tech-icon svg[title="React"] {
+  color: #61dafb;
+}
+
+.tech-icon svg[title="Python"] {
+  color: #3776ab;
+}
+
+.tech-icon svg[title="HTML5"] {
+  color: #e34f26;
+}
+
+.tech-icon svg[title="JavaScript"] {
+  color: #f7df1e;
+}
+
+.tech-icon svg[title="CSS3"] {
+  color: #1572b6;
+}
+
+.tech-icon svg[title="Java"] {
+  color: #007396;
+}
+
+.tech-icon svg[title="Spring"] {
+  color: #6db33f;
+} 

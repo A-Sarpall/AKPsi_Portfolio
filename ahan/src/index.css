@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Add some padding to the bottom on mobile for the sidebar */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 550px;
+  }
+}

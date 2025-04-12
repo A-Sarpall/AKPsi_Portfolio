@@ -1,0 +1,36 @@
+.personal-interests {
+    background-color: #555A41;
+  }
+  
+  .interest-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .interest-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .interests-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .interests-list h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .interests-list h3:hover {
+    color: var(--accent-color);
+  }
