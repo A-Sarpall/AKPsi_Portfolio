@@ -16,7 +16,27 @@ function About() {
         </li>
         <li>
           <span className="bullet">•</span>
+          Brother of Alpha Kappa Psi Fraternity
+        </li>
+        <li>
+          <span className="bullet">•</span>
           Seeking Software Engineering Internship
+        </li>
+        <li>
+          <span className="bullet">•</span>
+            Logical
+        </li>
+        <li>
+          <span className="bullet">•</span>
+          Creative
+        </li>
+        <li>
+          <span className="bullet">•</span>
+          Efficient
+        </li>
+        <li>
+          <span className="bullet">•</span>
+          Collaborative
         </li>
       </ul>
     </section>

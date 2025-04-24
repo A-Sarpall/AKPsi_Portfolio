@@ -2,6 +2,11 @@
   background-color: #555A41;
 }
 
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -17,15 +22,39 @@
   height: 64px;
   color: var(--text-color);
   transition: color 0.3s ease;
+  position: relative;
 }
 
 .social-links a svg {
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
 }
 
 .social-links a:hover {
-  color: var(--accent-color);
+  color: var(--hover-color);
+}
+
+/* Custom tooltip styling */
+.social-links a::before {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.social-links a:hover::before {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Specific colors for each platform */

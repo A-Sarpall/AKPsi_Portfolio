@@ -1,6 +1,10 @@
 .tech-stack {
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .tech-icons {
@@ -8,6 +12,7 @@
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
+  padding: 0 1rem;
 }
 
 .tech-icon {
@@ -17,11 +22,33 @@
   font-size: 2.5rem;
   color: var(--secondary-color);
   transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
 }
 
 .tech-icon:hover {
   transform: translateY(-5px);
   color: #ffeb3b;
+}
+
+.tech-icon::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tech-icon:hover::after {
+  opacity: 1;
 }
 
 /* Add specific colors for each technology */
@@ -49,6 +76,14 @@
   color: #007396;
 }
 
-.tech-icon svg[title="Spring"] {
-  color: #6db33f;
-} 
+.tech-icon svg[title="Firebase"] {
+  color: #FFCA28;
+}
+
+.tech-icon svg[title="Next.js"] {
+  color: #000000;
+}
+
+.tech-icon svg[title="Google Maps"] {
+  color: #4285F4;
+}

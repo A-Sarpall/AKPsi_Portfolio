@@ -6,7 +6,7 @@
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin: 1rem 0;
   }
   
   .interest-image img {
@@ -32,5 +32,5 @@
   }
   
   .interests-list h3:hover {
-    color: var(--accent-color);
+    color: var(--hover-color);
   }

@@ -1,12 +1,18 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
+  const location = useLocation();
+  const isProjectsPage = location.pathname === '/projects';
+
   return (
     <header className="header">
       <h1 className="name">AHAN SARIPALLI</h1>
       <nav>
-        <a href="#projects" className="nav-link">PROJECTS</a>
+        <Link to={isProjectsPage ? "/" : "/projects"} className="nav-link">
+          {isProjectsPage ? "HOME" : "PROJECTS"}
+        </Link>
       </nav>
     </header>
   );
