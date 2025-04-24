@@ -16,7 +16,7 @@ function Carousel({ items, type, timing = 3000 }) {
       clearInterval(timerRef.current);
     }
     startTimer();
-  }, [startTimer]);
+  }, [startTimer, items.length]);
 
   useEffect(() => {
     startTimer();
