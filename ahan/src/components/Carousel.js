@@ -1,22 +1,22 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './Carousel.css';
 
 function Carousel({ items, type, timing = 3000 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timerRef = useRef(null);
 
-  const startTimer = () => {
+  const startTimer = useCallback(() => {
     timerRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     }, timing);
-  };
+  }, [items.length, timing]);
 
-  const resetTimer = () => {
+  const resetTimer = useCallback(() => {
     if (timerRef.current) {
       clearInterval(timerRef.current);
     }
     startTimer();
-  };
+  }, [startTimer]);
 
   useEffect(() => {
     startTimer();
@@ -25,17 +25,17 @@ function Carousel({ items, type, timing = 3000 }) {
         clearInterval(timerRef.current);
       }
     };
-  }, [items.length, timing]);
+  }, [startTimer]);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     resetTimer();
-  };
+  }, [resetTimer]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
     resetTimer();
-  };
+  }, [resetTimer, items.length]);
 
   return (
     <div className="carousel">
