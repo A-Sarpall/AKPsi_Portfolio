@@ -16,7 +16,7 @@ function Carousel({ items, type, timing = 3000 }) {
       clearInterval(timerRef.current);
     }
     startTimer();
-  }, [startTimer, items.length]);
+  }, [startTimer]);
 
   useEffect(() => {
     startTimer();
@@ -30,12 +30,12 @@ function Carousel({ items, type, timing = 3000 }) {
   const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     resetTimer();
-  }, [resetTimer]);
+  }, [items.length, resetTimer]);
 
   const prevSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
     resetTimer();
-  }, [resetTimer, items.length]);
+  }, [items.length, resetTimer]);
 
   return (
     <div className="carousel">
