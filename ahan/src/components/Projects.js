@@ -9,7 +9,7 @@ import PsiFlow from '../assets/PsiFlow.png';
 import GridironGuide from '../assets/GridironGuide.png';
 import RatioAdjuster from '../assets/RatioAdjuster.png';
 import Dagger from '../assets/Dagger.png';
-import prodplex from '..assets/prodplex.png';
+import prodplex from '../assets/prodplex.png';
 import phoniverse from '../assets/phoniverse.png';
 
 const projects = [
