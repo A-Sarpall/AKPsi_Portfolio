@@ -92,13 +92,20 @@ const projects = [
 ];
 
 const ProjectCard = ({ project }) => {
+  const isAwardWinner = project.title === 'ProdPlex' || project.title === 'PsiFlow';
+  
   return (
-    <div className="project-card">
+    <div className={`project-card ${isAwardWinner ? 'award-winner' : ''}`}>
       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
         <div className="project-image-container">
+          {isAwardWinner && (
+            <div className="award-ribbon">
+              <span>3rd Place</span>
+            </div>
+          )}
           <img src={project.imageUrl} alt={project.title} className="project-image" />
         </div>
-        <h3>{project.title}</h3>
+        <h3 className={isAwardWinner ? 'bronze-text' : ''}>{project.title}</h3>
         <p>{project.description}</p>
       </a>
     </div>
@@ -108,7 +115,6 @@ const ProjectCard = ({ project }) => {
 const Projects = () => {
   return (
     <div className="projects-page">
-      <h1 className="projects-title">My Projects</h1>
       <div className="projects-grid">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
